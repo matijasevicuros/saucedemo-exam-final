@@ -63,7 +63,7 @@ public class SemanticLinkPageTest extends BaseTest {
             }
         }
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.urlContains("facebook.com"));
-        facebookPage.acceptCookies();
+        facebookPage.declineCookies();
         facebookPage.closeLogin();
         Assertions.assertEquals("Sauce Labs ", facebookPage.validateIdName());
         driver.close();
